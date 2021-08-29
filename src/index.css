@@ -117,11 +117,11 @@ h1 {
 	color: #FFF;
 }
 
-.income-list {
+.earning-list {
 	padding: 15px;
 }
 
-.income-list .income-item {
+.earning-list .earning-item {
 	position: relative;
 	padding: 10px 15px;
 	background-color: #FFF;
@@ -132,7 +132,7 @@ h1 {
 	padding-left: 75px;
 }
 
-.income-list .income-item .remove-item {
+.earning-list .earning-item .remove-item {
 	position: absolute;
 	width: 0;
 	top: 0;
@@ -149,18 +149,18 @@ h1 {
 	transition: 0.2s;
 }
 
-.income-list .income-item:hover .remove-item {
+.earning-list .earning-item:hover .remove-item {
 	width: 50px;
 }
 
-.income-list .income-item .desc {
+.earning-list .earning-item .desc {
 	flex: 1 1 100%;
 }
 
-.income-list .income-item .price,
-.income-list .income-item .date {
+.earning-list .earning-item .price,
+.earning-list .earning-item .date {
 	min-width: 125px;
 }
-.income-list .income-item:hover {
+.earning-list .earning-item:hover {
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
 }

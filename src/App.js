@@ -19,7 +19,7 @@ function App() {
     <div className="App">
      <Header totalEarnings={totalEarnings}></Header>
      <EarningsForm earnings={earnings} setEarnings={setEarnings}></EarningsForm>
-     <EarningsList></EarningsList>
+     <EarningsList earnings={earnings} setEarnings={setEarnings}></EarningsList>
     
     </div>
   );
