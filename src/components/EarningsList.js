@@ -4,7 +4,7 @@ import EarningItem from './EarningItem';
 const EarningsList = ({earnings, setEarnings}) => {
 
     const removeEarning = i =>{
-        let temp = earnings.filter((v, index) => index != i);
+        let temp = earnings.filter((v, index) => index !== i);
         setEarnings(temp);
     }
 
