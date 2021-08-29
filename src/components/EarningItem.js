@@ -1,25 +1,25 @@
 import React from 'react';
 
-const EarningItem = ({earnings, index, removeItem) => {
+const EarningItem = ({earnings, index, removeEarning} )=> {
 
-    let date = new Date(income.date);
+    let date = new Date(earnings.date);
     let day = date.getDate();
-    let monts = date.getMonth() + 1;
+    let month = date.getMonth() + 1;
     let year = date.getFullYear();
 
     const removeHandle = i =>{
-        removeEarnings(i);
+        removeEarning(i);
     }
 
     return (
-        <div>
+        <div className="earning-item">
             <button className="remove-item" onClick=
                 {()=>removeHandle(index)}
             > x </button>
             <div className="desc">{earnings.desc}</div>
             <div className="price">৳{earnings.price}</div>
             <div className="date">{day + "/" + month + "/" + year}</div>
-            
+
         </div>
     );
 };
