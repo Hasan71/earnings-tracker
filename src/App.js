@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, {useState, useEffect} from "react";
+import EarningsForm from "./components/EarningsForm";
+import EarningsList from "./components/EarningsList";
+import Header from './components/Header';
 function App() {
+
+  const [earnings, setEarnings] = useState([]);
+  const [totalEarnings, setTotalEarnings] = useState(0);
+
+  useEffect(() =>{
+    let temp = 0;
+    for(let i=0; i<earnings.length; i++){
+      temp += parseInt(earnings[i].price);
+    }
+    setTotalEarnings(temp);
+  }, [earnings])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header totalEarnings={totalEarnings}></Header>
+     <EarningsForm earnings={earnings} setEarnings={setEarnings}></EarningsForm>
+     <EarningsList></EarningsList>
+    
     </div>
   );
 }
