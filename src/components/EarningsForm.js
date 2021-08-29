@@ -8,7 +8,7 @@ const EarningsForm = ({earnings, setEarnings}) => {
 
     const AddEarning = e =>{
         e.preventDefault();
-        
+
         let d = date.current.value.split("-");
         let newD = new Date(d[0], d[1] - 1, d[2]);
 
@@ -27,9 +27,9 @@ const EarningsForm = ({earnings, setEarnings}) => {
     return (
         <form className="earnings-form" onSubmit={AddEarning}>
             <div className="form-inner">
-                <input type="text" name="desc" id="desc" placeholder="Earnings Description..." ref={desc} required/>
-                <input type="number" name="price" id="price" placeholder="Price..." ref={price} required/>
-                <input type="date" name="date" id="date" placeholder="Earnings Date..." ref={date} required />
+                <input type="text" name="desc" id="desc" placeholder="Earning Description" ref={desc} required/>
+                <input type="number" name="price" id="price" placeholder="Price" ref={price} required/>
+                <input type="date" name="date" id="date" ref={date} required />
                 <input type="submit" value="Add Earning" />
             </div>
         </form>

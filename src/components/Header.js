@@ -3,9 +3,9 @@ import React from 'react';
 const Header = ({totalEarnings}) => {
     return (
         <header>
-            <h1>Earnings Tracker</h1>
+            <h1 style={{color:"#FF9A32"}}>Earnings Tracker</h1>
             <div className="total-earnings">
-                ৳ {totalEarnings}
+                Total: ৳{totalEarnings}
             </div>
         </header>
     );

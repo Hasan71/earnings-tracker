@@ -4,7 +4,7 @@ const EarningItem = ({earnings, index, removeEarning} )=> {
 
     let date = new Date(earnings.date);
     let day = date.getDate();
-    let month = date.getMonth() + 1;
+    let month = date.getMonth()+1;
     let year = date.getFullYear();
 
     const removeHandle = i =>{
